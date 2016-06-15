@@ -5,7 +5,10 @@ object ContaPalavras {
     def validar(palavra: String) = {
       if (palavra == "")
         Map()
-      else
-        Map(palavra -> 1)
+      else{
+        var palavras = palavra.split(" ")
+        palavras.map(_ -> 1).toMap
+        //print(palavras)
+      }
     }
 }
