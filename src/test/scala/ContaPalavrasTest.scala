@@ -16,4 +16,11 @@ class ContaPalavrasTest extends FunSuite with BeforeAndAfterEach {
     assert(ContaPalavras.validar("Alo galera") == Map("Alo" -> 1, "galera" -> 1))
   }
 
+  test("Deve retornar um map com as palavras diferentes, para 3"){
+    assert(ContaPalavras.validar("alo alo galera") == Map("alo" -> 2, "galera" -> 1))
+  }
+
+  /*test("Deve retornar um map com as palavras diferentes, para 3"){
+    assert(ContaPalavras.validar("alo galera palavras") == Map("alo" -> 1, "galera" -> 1, "palavras" -> 1))
+  }*/
 }

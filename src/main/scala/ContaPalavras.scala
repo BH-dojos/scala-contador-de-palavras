@@ -1,14 +1,10 @@
-/**
-  * Created by fviane on 6/15/16.
-  */
 object ContaPalavras {
-    def validar(palavra: String) = {
-      if (palavra == "")
+    def validar(frase: String): Map[String, Int] = {
+      if (frase == "")
         Map()
       else{
-        var palavras = palavra.split(" ")
-        palavras.map(_ -> 1).toMap
-        //print(palavras)
+        var fraseArray: Array[String] = frase.split(" ")
+        fraseArray.map((x:String) => x -> fraseArray.count(_ == x)).toMap
       }
     }
 }
